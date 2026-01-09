@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+    <Dialog id="myCustomDialog" title="Custom Dialog">
+    		<f:SimpleForm id="simpleForm"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label id="messageLabel" text="Message"/>
+                <Input id="messageInput" value="{dialogModel>/message}" type="Text" />
+			</f:content>
+		</f:SimpleForm>
+        <beginButton>
+            <Button text="OK" press=".submit" />
+        </beginButton>
+        <endButton>
+            <Button text="Close" press=".close" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
