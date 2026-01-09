@@ -1,0 +1,33 @@
+{
+  "name": "reuselib",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@ui5/cli": "^4.0.33",
+    "karma": "^6.3.17",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-cli": "^2.0.0",
+    "karma-ui5": "^3.0.3",
+    "@sap/ux-ui5-tooling": "1",
+    "@sapui5/types": "1.143.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@ui5/ts-interface-generator": "^0.8.1",
+    "eslint": "^8.57.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.1.6",
+    "ui5-tooling-transpile": "^3.3.7",
+    "@sap-ux/eslint-plugin-fiori-tools": "^0.4.0"
+  },
+  "scripts": {
+    "build": "run-p -l build-app build-interface",
+    "deploy": "fiori verify",
+    "deploy-config": "fiori add deploy-config",
+    "start": "fiori run --open \"test-resources/com/myorg/reuselib/Example.html\"",
+    "testsuite": "fiori run --open test-resources/com/myorg/reuselib/qunit/testsuite.qunit.html",
+    "test": "karma start --browsers=ChromeHeadless --singleRun=true",
+    "build-app": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+    "build-interface": "npx @ui5/ts-interface-generator",
+    "ts-typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  }
+}
