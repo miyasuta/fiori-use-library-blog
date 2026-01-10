@@ -18,41 +18,17 @@ Lib.init({
 		"sap.ui.core"
 	],
 	types: [
-		"com.myorg.reuselib.ExampleColor"
+		// your types here
 	],
 	interfaces: [],
 	controls: [
-		"com.myorg.reuselib.Example"
+		// your controls here
 	],
 	elements: [],
-	noLibraryCSS: false, // if no CSS is provided, you can disable the library.css load here
+	noLibraryCSS: true, // if no CSS is provided, you can disable the library.css load here
 	apiVersion: 2,
 });
 
 // get the library object from global object space because all enums must be attached to it to be usable as UI5 types
 // FIXME: this line is planned to become obsolete and may need to be removed later
-const thisLib : {[key: string]: unknown} = ObjectPath.get("com.myorg.reuselib") as {[key: string]: unknown};
-
-/**
- * Semantic Colors of the com.myorg.myUI5Library.Example control.
- *
- * @enum {string}
- * @public
- */
-export enum ExampleColor {
-
-	/**
-	 * Default color (brand color)
-	 * @public
-	 */
-	Default = "Default",
-
-	/**
-	 * Highlight color
-	 * @public
-	 */
-	Highlight = "Highlight"
-
-}
-// FIXME: this line is planned to become obsolete and may need to be removed later
-thisLib.ExampleColor = ExampleColor; // add the enum to the library; this is important because UI5 otherwise cannot identify the type and will skip type checking for properties of this type
+const thisLib: { [key: string]: unknown } = ObjectPath.get("com.myorg.reuselib") as { [key: string]: unknown };

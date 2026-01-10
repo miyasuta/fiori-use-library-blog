@@ -5,6 +5,9 @@ metadata:
   name: miyasuta.consumerapp
 type: application
 builder:
+  settings:
+    includeDependency:
+      - com.myorg.reuselib
   customTasks:
     - name: ui5-tooling-transpile-task
       afterTask: replaceVersion
@@ -17,6 +20,8 @@ builder:
       configuration:
         archiveName: miyasutaconsumerapp
         relativePaths: true
+        includeDependencies:
+          - com.myorg.reuselib
         additionalFiles:
           - xs-app.json
   resources:

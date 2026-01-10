@@ -1,6 +1,6 @@
 specVersion: '2.2'
 metadata:
-  name: "reuselib"
+  name: com.myorg.reuselib
 type: library
 framework:
   name: SAPUI5
@@ -25,6 +25,9 @@ server:
         excludePatterns:
           - /Component-preload.js
 builder:
+  resources:
+    excludes:
+      - "/test-resources/**"
   customTasks:
     - name: ui5-tooling-transpile-task
       afterTask: replaceVersion

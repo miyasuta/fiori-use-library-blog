@@ -8,6 +8,9 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
+  "dependencies": {
+    "com.myorg.reuselib": "file:../com.myorg.reuselib"
+  },
   "devDependencies": {
     "@ui5/cli": "^4.0.33",
     "@sap/ux-ui5-tooling": "1",

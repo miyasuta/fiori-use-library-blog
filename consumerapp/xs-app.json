@@ -10,6 +10,12 @@
       "csrfProtection": false
     },
     {
+      "source": "^/resources/com/myorg/reuselib/(.*)$",
+      "target": "/resources/com/myorg/reuselib/$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    },
+    {
       "source": "^/resources/(.*)$",
       "target": "/resources/$1",
       "authenticationType": "none",
