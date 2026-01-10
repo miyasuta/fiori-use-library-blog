@@ -29,7 +29,7 @@ export default class MyDialogHandler extends EventProvider {
     public open(): void {
         // load fragment
         Fragment.load({
-            name: "miyasuta.mylibrary.fragments.MyDialog",
+            name: "com.myorg.reuselib.fragment.MyDialog",
             controller: this
         }).then(dialog => {
             this._dialog = dialog as Dialog;
