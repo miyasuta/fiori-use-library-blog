@@ -34,6 +34,14 @@ server:
           overridesToOverride: true
         excludePatterns:
           - /Component-preload.js
+    - name: fiori-tools-servestatic
+      beforeMiddleware: fiori-tools-proxy
+      configuration:
+        paths:
+          - path: /resources/com/myorg/reuselib
+            # src: ../com.myorg.reuselib/src/com/myorg/reuselib
+            src: ../com.myorg.reuselib/dist/resources/com/myorg/reuselib
+            fallthrough: false
 builder:
   customTasks:
     - name: ui5-tooling-transpile-task

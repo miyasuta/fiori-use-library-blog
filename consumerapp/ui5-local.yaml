@@ -37,6 +37,13 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+    - name: fiori-tools-servestatic
+      beforeMiddleware: fiori-tools-proxy
+      configuration:
+        paths:
+          - path: /resources/com/myorg/reuselib
+            src: ../com.myorg.reuselib/src/com/myorg/reuselib
+            fallthrough: false
 builder:
   customTasks:
     - name: ui5-tooling-transpile-task

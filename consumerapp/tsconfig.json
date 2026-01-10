@@ -27,6 +27,7 @@
     ]
   },
   "include": [
-    "./webapp/**/*"
+    "./webapp/**/*",
+    "../com.myorg.reuselib/dist/resources/**/*.d.ts"
   ]
 }
