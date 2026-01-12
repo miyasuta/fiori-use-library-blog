@@ -28,6 +28,6 @@
   },
   "include": [
     "./webapp/**/*",
-    "../com.myorg.reuselib/dist/resources/**/*.d.ts"
+    "../com.myorg.reuselib/dist/index.d.ts"
   ]
 }
