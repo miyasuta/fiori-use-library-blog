@@ -9,7 +9,7 @@
   ],
   "main": "webapp/index.html",
   "dependencies": {
-    "com.myorg.reuselib": "file:../com.myorg.reuselib"
+    "com.myorg.reuselib": "^1.0.0"
   },
   "devDependencies": {
     "@ui5/cli": "^4.0.33",
